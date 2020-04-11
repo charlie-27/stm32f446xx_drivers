@@ -209,7 +209,7 @@ int main(void)
 		{
 			/* Send arguments */
 			args[0] = ANALOG_PIN0;
-			while(SPI_SendDataInterruptMode(&SPI2Handle, &args, 1) != SPI_READY);
+			while(SPI_SendDataInterruptMode(&SPI2Handle, args, 1) != SPI_READY);
 			printf("Command Sensor Read executed!\n");
 
 			/* Dummy read to clear off the RXNE */
